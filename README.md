@@ -38,7 +38,7 @@ Abrir <http://127.0.0.1:5173>. Requisitos de desarrollo: Node.js22 o posterior, 
 ## Hover y alcance
 
 - Botones principales: cambio inmediato de fondo.
-- Enlaces y navegación: subrayado; la marca reduce su opacidad.
+- Menú superior: cambio inmediato a verde oscuro, sin subrayado; los demás enlaces conservan su hover y la marca reduce su opacidad.
 - Lupa y bolsa: cambio inmediato de color.
 - Watch Video: cambio de fondo del círculo y subrayado del texto.
 - Sign In: cambio de separación del subrayado.

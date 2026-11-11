@@ -43,9 +43,11 @@
   gap: design(14);
   cursor: pointer;
 }
-.more-button:hover {
-  text-decoration: underline;
-  text-underline-offset: 5px;
+// El menú cambia de color al pasar el puntero, sin línea ni animación.
+.main-nav a:hover,
+.main-nav button:hover {
+  color: #39796c;
+  text-decoration: none;
 }
 .more-button svg {
   width: design(16);

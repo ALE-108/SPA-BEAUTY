@@ -88,7 +88,6 @@ svg {
 }
 
 a:hover,
-.main-nav button:hover,
 .sign-in:hover {
   text-decoration: underline;
   text-underline-offset: 5px;
@@ -141,9 +140,10 @@ a:hover,
   cursor: pointer;
 }
 
-.more-button:hover {
-  text-decoration: underline;
-  text-underline-offset: 5px;
+.main-nav a:hover,
+.main-nav button:hover {
+  color: #39796c;
+  text-decoration: none;
 }
 
 .more-button svg {

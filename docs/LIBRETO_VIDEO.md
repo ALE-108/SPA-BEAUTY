@@ -66,7 +66,7 @@ Abrir el PDF en página2, el editor y el navegador a1920×1080, zoom100%. Ejecut
 
 **Pantalla:** Selectores hover de _base.scss, _header.scss y _hero.scss.
 
-**Narración:** «La consigna sí pide hover: al colocar el puntero sobre un control, cambia su aspecto. No exige animación ni prescribe colores concretos. Los botones cambian de fondo; los enlaces se subrayan; la marca cambia de opacidad y los iconos cambian de color. Video cambia el fondo del círculo y subraya su texto. Son cambios inmediatos. No hay transition, animation ni keyframes, tampoco popovers ni un desplegable. El foco de teclado conserva el comportamiento nativo del navegador.»
+**Narración:** «La consigna sí pide hover: al colocar el puntero sobre un control, cambia su aspecto. No exige animación ni prescribe colores concretos. El menú superior cambia a verde oscuro sin subrayado. Los botones cambian de fondo; los demás enlaces conservan su subrayado; la marca cambia de opacidad y los iconos cambian de color. Video cambia el fondo del círculo y subraya su texto. Son cambios inmediatos. No hay transition, animation ni keyframes, tampoco popovers ni un desplegable. El foco de teclado conserva el comportamiento nativo del navegador.»
 
 **Demostración:** Pasar por los doce controles y pulsarlos para comprobar que no aparecen funciones adicionales.
 
