@@ -1,0 +1,7 @@
+# Dependencias y archivos temporales se reconstruyen desde el lockfile.
+node_modules/
+*.log
+.DS_Store
+.env
+.env.*
+!.env.example

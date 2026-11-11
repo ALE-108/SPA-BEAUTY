@@ -1,0 +1,5 @@
+// Punto de entrada: los módulos se compilan en el orden de sus responsabilidades.
+@use "base";
+@use "header";
+@use "hero";
+@use "mobile";

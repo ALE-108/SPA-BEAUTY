@@ -1,0 +1,18 @@
+{
+  "name": "spa-beauty",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Header estático GlowQueen con HTML semántico y Sass.",
+  "scripts": {
+    "build": "sass --no-source-map --style=expanded scss/styles.scss css/styles.css",
+    "watch": "sass --watch --no-source-map scss/styles.scss:css/styles.css",
+    "start": "python3 -m http.server 5173 --bind 127.0.0.1",
+    "check:css": "npm run build && git diff --exit-code -- css/styles.css"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "sass": "1.108.2"
+  }
+}
