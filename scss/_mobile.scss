@@ -2,49 +2,184 @@
 
 // Adaptación adicional: bajo 900px el contenido vuelve al flujo para seguir siendo legible.
 @media (max-width: 899px) {
-  .stage { aspect-ratio: auto; min-height: 100vh; overflow: clip; padding: 24px; }
-  .stage::before { height: 100%; background: linear-gradient(150deg, $cream 60%, $mint); }
-  .site-header { position: relative; inset: auto; height: auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 24px; font-size: 14px; }
-  .brand { font-size: 28px; letter-spacing: -1px; }
-  .main-nav { order: 3; width: 100%; }
-  .main-nav > ul { flex-wrap: wrap; gap: 20px; }
-  .more-menu summary { gap: 8px; }
-  .more-menu svg { width: 14px; height: 14px; }
+  .stage {
+    aspect-ratio: auto;
+    min-height: 100vh;
+    overflow: clip;
+    padding: 24px;
+  }
+  .stage::before {
+    height: 100%;
+    background: linear-gradient(150deg, $cream 60%, $mint);
+  }
+  .site-header {
+    position: relative;
+    inset: auto;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 24px;
+    font-size: 14px;
+  }
+  .brand {
+    font-size: 28px;
+    letter-spacing: -1px;
+  }
+  .main-nav {
+    order: 3;
+    width: 100%;
+  }
+  .main-nav > ul {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .more-menu summary {
+    gap: 8px;
+  }
+  .more-menu svg {
+    width: 14px;
+    height: 14px;
+  }
 
   // Los controles secundarios se mantienen accesibles dentro del ancho disponible.
-  .header-actions { gap: 16px; }
-  .icon-button { width: 28px; height: 32px; }
-  .icon-button svg { width: 24px; height: 24px; }
-  .sign-in { margin-left: 0; }
-  .sign-up { width: 90px; height: 44px; }
-  .hero-copy { position: relative; inset: auto; margin-top: 56px; }
-  .hero-copy h1 { font-size: clamp(30px, 5vw, 48px); }
-  .hero-description { margin-top: 24px; font-size: 17px; line-height: 1.8; }
-  .desktop-break { display: none; }
-  .hero-actions { margin-top: 28px; gap: 24px; font-size: 14px; }
-  .book-button { width: 140px; height: 50px; }
-  .video-button { gap: 12px; }
-  .play-icon { width: 44px; height: 44px; }
-  .play-icon svg { width: 22px; height: 22px; }
+  .header-actions {
+    gap: 16px;
+  }
+  .icon-button {
+    width: 28px;
+    height: 32px;
+  }
+  .icon-button svg {
+    width: 24px;
+    height: 24px;
+  }
+  .sign-in {
+    margin-left: 0;
+  }
+  .sign-up {
+    width: 90px;
+    height: 44px;
+  }
+  .hero-copy {
+    position: relative;
+    inset: auto;
+    margin-top: 56px;
+  }
+  .hero-copy h1 {
+    font-size: clamp(30px, 5vw, 48px);
+  }
+  .hero-description {
+    margin-top: 24px;
+    font-size: 17px;
+    line-height: 1.8;
+  }
+  .desktop-break {
+    display: none;
+  }
+  .hero-actions {
+    margin-top: 28px;
+    gap: 24px;
+    font-size: 14px;
+  }
+  .book-button {
+    width: 140px;
+    height: 50px;
+  }
+  .video-button {
+    gap: 12px;
+  }
+  .play-icon {
+    width: 44px;
+    height: 44px;
+  }
+  .play-icon svg {
+    width: 22px;
+    height: 22px;
+  }
 
   // La fotografía y los testimonios se apilan para evitar solapamientos en móvil.
-  .portrait { position: relative; inset: auto; width: min(100%, 480px); margin: 40px auto 0; }
-  main { display: flex; flex-direction: column; }
-  .portrait { order: 2; }
-  .lotus { left: 35%; top: 450px; width: 65%; height: auto; }
-  .statistics { position: relative; inset: auto; order: 1; width: 100%; min-height: auto; margin-top: 40px; padding: 24px 0; border-radius: 18px; }
-  .statistics img { width: 56px; height: 56px; }
-  .statistics strong { margin-top: 16px; font-size: 28px; line-height: 1.5; }
-  .statistics p { margin-top: 8px; font-size: 12px; line-height: 1.6; }
-  .testimonials { order: 3; display: grid; gap: 20px; margin-top: 24px; }
-  .testimonial { position: relative; inset: auto; width: 100%; min-height: auto; padding: 52px 24px 24px; border-radius: 16px; font-size: 15px; }
-  .testimonial figcaption { margin-top: 12px; }
-  .quote-mark { top: 22px; left: 24px; gap: 6px; }
-  .quote-mark::before, .quote-mark::after { width: 8px; height: 18px; }
+  .portrait {
+    position: relative;
+    inset: auto;
+    width: min(100%, 480px);
+    margin: 40px auto 0;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+  .portrait {
+    order: 2;
+  }
+  .lotus {
+    left: 35%;
+    top: 450px;
+    width: 65%;
+    height: auto;
+  }
+  .statistics {
+    position: relative;
+    inset: auto;
+    order: 1;
+    width: 100%;
+    min-height: auto;
+    margin-top: 40px;
+    padding: 24px 0;
+    border-radius: 18px;
+  }
+  .statistics img {
+    width: 56px;
+    height: 56px;
+  }
+  .statistics strong {
+    margin-top: 16px;
+    font-size: 28px;
+    line-height: 1.5;
+  }
+  .statistics p {
+    margin-top: 8px;
+    font-size: 12px;
+    line-height: 1.6;
+  }
+  .testimonials {
+    order: 3;
+    display: grid;
+    gap: 20px;
+    margin-top: 24px;
+  }
+  .testimonial {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    min-height: auto;
+    padding: 52px 24px 24px;
+    border-radius: 16px;
+    font-size: 15px;
+  }
+  .testimonial figcaption {
+    margin-top: 12px;
+  }
+  .quote-mark {
+    top: 22px;
+    left: 24px;
+    gap: 6px;
+  }
+  .quote-mark::before,
+  .quote-mark::after {
+    width: 8px;
+    height: 18px;
+  }
 }
 
 // En teléfonos estrechos se reserva una fila para las acciones de cabecera.
 @media (max-width: 480px) {
-  .header-actions { width: 100%; justify-content: space-between; }
-  .main-nav > ul { gap: 16px; font-size: 13px; }
+  .header-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .main-nav > ul {
+    gap: 16px;
+    font-size: 13px;
+  }
 }

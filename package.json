@@ -2,17 +2,20 @@
   "name": "spa-beauty",
   "version": "1.0.0",
   "private": true,
-  "description": "Header estático GlowQueen con HTML semántico y Sass.",
+  "description": "Header est\u00e1tico GlowQueen con HTML sem\u00e1ntico y Sass.",
   "scripts": {
     "build": "sass --no-source-map --style=expanded scss/styles.scss css/styles.css",
     "watch": "sass --watch --no-source-map scss/styles.scss:css/styles.css",
     "start": "python3 -m http.server 5173 --bind 127.0.0.1",
-    "check:css": "npm run build && git diff --exit-code -- css/styles.css"
+    "check:css": "npm run build && git diff --exit-code -- css/styles.css",
+    "format": "prettier --write index.html \"scss/**/*.scss\" \"docs/**/*.md\" README.md package.json .github/workflows/check.yml",
+    "format:check": "prettier --check index.html \"scss/**/*.scss\" \"docs/**/*.md\" README.md package.json .github/workflows/check.yml"
   },
   "engines": {
     "node": ">=22"
   },
   "devDependencies": {
+    "prettier": "3.9.10",
     "sass": "1.108.2"
   }
 }

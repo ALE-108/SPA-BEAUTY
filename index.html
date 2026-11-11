@@ -2,14 +2,23 @@
 <html lang="en">
   <head>
     <!-- Metadatos, fuente local y CSS compilado para una carga independiente. -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="GlowQueen spa and beauty — treatments, professional therapists and herbal skin care.">
-    <meta name="theme-color" content="#a9d6cb">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="GlowQueen spa and beauty — treatments, professional therapists and herbal skin care."
+    />
+    <meta name="theme-color" content="#a9d6cb" />
     <title>GlowQueen — Spa &amp; Beauty</title>
-    <link rel="icon" href="assets/icons/lotus.svg" type="image/svg+xml">
-    <link rel="preload" href="assets/fonts/poppins-regular.ttf" as="font" type="font/ttf" crossorigin>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="assets/icons/lotus.svg" type="image/svg+xml" />
+    <link
+      rel="preload"
+      href="assets/fonts/poppins-regular.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
     <!-- El enlace de salto permite llegar al contenido usando el teclado. -->
@@ -18,16 +27,27 @@
     <div class="stage" id="home">
       <!-- Identidad y navegación principal; More ofrece destinos reales de esta página. -->
       <header class="site-header">
-        <a class="brand" href="#home" aria-label="GlowQueen home">Glow<span>Queen</span></a>
+        <a class="brand" href="#home" aria-label="GlowQueen home"
+          >Glow<span>Queen</span></a
+        >
         <nav class="main-nav" aria-label="Main navigation">
           <ul>
             <li><a href="#home" aria-current="page">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
-            <li><button type="button" popovertarget="preview-note">Facilities</button></li>
+            <li>
+              <button type="button" popovertarget="preview-note">
+                Facilities
+              </button>
+            </li>
             <li class="more-menu">
               <details>
-                <summary>More <svg viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></summary>
+                <summary>
+                  More
+                  <svg viewBox="0 0 16 16" aria-hidden="true">
+                    <path d="m4 6 4 4 4-4" />
+                  </svg>
+                </summary>
                 <ul class="dropdown">
                   <li><a href="#services">Our expertise</a></li>
                   <li><a href="#testimonials">Testimonials</a></li>
@@ -39,30 +59,86 @@
 
         <!-- Controles de cabecera con nombres accesibles para los iconos sin texto. -->
         <div class="header-actions">
-          <button class="icon-button" type="button" aria-label="Search" popovertarget="preview-note">
-            <svg viewBox="0 0 28 28" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="m18 18 6 6"/></svg>
+          <button
+            class="icon-button"
+            type="button"
+            aria-label="Search"
+            popovertarget="preview-note"
+          >
+            <svg viewBox="0 0 28 28" aria-hidden="true">
+              <circle cx="12" cy="12" r="8" />
+              <path d="m18 18 6 6" />
+            </svg>
           </button>
-          <button class="icon-button" type="button" aria-label="Shopping bag" popovertarget="preview-note">
-            <svg viewBox="0 0 28 28" aria-hidden="true"><path d="M6 9h16v16H6zM10 11V7a4 4 0 0 1 8 0v4"/></svg>
+          <button
+            class="icon-button"
+            type="button"
+            aria-label="Shopping bag"
+            popovertarget="preview-note"
+          >
+            <svg viewBox="0 0 28 28" aria-hidden="true">
+              <path d="M6 9h16v16H6zM10 11V7a4 4 0 0 1 8 0v4" />
+            </svg>
           </button>
-          <button class="sign-in" type="button" popovertarget="preview-note">Sign In</button>
-          <button class="button sign-up" type="button" popovertarget="preview-note">Sign Up</button>
+          <button class="sign-in" type="button" popovertarget="preview-note">
+            Sign In
+          </button>
+          <button
+            class="button sign-up"
+            type="button"
+            popovertarget="preview-note"
+          >
+            Sign Up
+          </button>
         </div>
       </header>
 
       <main id="main" tabindex="-1">
         <!-- Las capas decorativas no interrumpen la lectura de la página. -->
-        <img class="lotus" src="assets/icons/lotus.svg" alt="" width="473" height="438">
-        <img class="portrait" src="assets/images/model.webp" alt="Woman gently touching her face after a skin care treatment" width="1100" height="1330" fetchpriority="high">
+        <img
+          class="lotus"
+          src="assets/icons/lotus.svg"
+          alt=""
+          width="473"
+          height="438"
+        />
+        <img
+          class="portrait"
+          src="assets/images/model.webp"
+          alt="Woman gently touching her face after a skin care treatment"
+          width="1100"
+          height="1330"
+          fetchpriority="high"
+        />
 
         <!-- Mensaje principal: texto real seleccionable y un único título h1. -->
         <section class="hero-copy" id="about" aria-labelledby="hero-title">
-          <h1 id="hero-title">Bring back the beauty<br>and glow of your skin</h1>
-          <p class="hero-description">We provide you various treatments from head to toe using the<br class="desktop-break"> best product, advanced technology, and affordable price</p>
+          <h1 id="hero-title">
+            Bring back the beauty<br />and glow of your skin
+          </h1>
+          <p class="hero-description">
+            We provide you various treatments from head to toe using the<br
+              class="desktop-break"
+            />
+            best product, advanced technology, and affordable price
+          </p>
           <div class="hero-actions">
-            <button class="button book-button" type="button" popovertarget="preview-note">Book Now</button>
-            <button class="video-button" type="button" popovertarget="video-note">
-              <span class="play-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 4 12 8L8 20Z"/></svg></span>
+            <button
+              class="button book-button"
+              type="button"
+              popovertarget="preview-note"
+            >
+              Book Now
+            </button>
+            <button
+              class="video-button"
+              type="button"
+              popovertarget="video-note"
+            >
+              <span class="play-icon"
+                ><svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="m8 4 12 8L8 20Z" /></svg
+              ></span>
               <span>Watch Video</span>
             </button>
           </div>
@@ -72,33 +148,64 @@
         <section class="statistics" id="services" aria-label="Our expertise">
           <ul>
             <li>
-              <img src="assets/icons/treatment.svg" alt="" width="72" height="72">
+              <img
+                src="assets/icons/treatment.svg"
+                alt=""
+                width="72"
+                height="72"
+              />
               <strong>15+</strong>
-              <p>Special<br>Treatment</p>
+              <p>Special<br />Treatment</p>
             </li>
             <li>
-              <img src="assets/icons/therapist.svg" alt="" width="72" height="72">
+              <img
+                src="assets/icons/therapist.svg"
+                alt=""
+                width="72"
+                height="72"
+              />
               <strong>25+</strong>
-              <p>Professional<br>Therapist</p>
+              <p>Professional<br />Therapist</p>
             </li>
             <li>
-              <img src="assets/icons/herbal.svg" alt="" width="72" height="72">
+              <img
+                src="assets/icons/herbal.svg"
+                alt=""
+                width="72"
+                height="72"
+              />
               <strong>100%</strong>
-              <p>Herbal<br>Cream Formula</p>
+              <p>Herbal<br />Cream Formula</p>
             </li>
           </ul>
         </section>
 
         <!-- Las citas conservan su autor y se superponen sin alterar el orden de lectura. -->
-        <section class="testimonials" id="testimonials" aria-label="Client testimonials">
+        <section
+          class="testimonials"
+          id="testimonials"
+          aria-label="Client testimonials"
+        >
           <figure class="testimonial testimonial--sophia">
             <span class="quote-mark" aria-hidden="true">〞</span>
-            <blockquote><p>I have a regular schedule to take treatment from GlowQueen, they gave me the best service and treatment ever to maintain the beauty and health of my skin</p></blockquote>
+            <blockquote>
+              <p>
+                I have a regular schedule to take treatment from GlowQueen, they
+                gave me the best service and treatment ever to maintain the
+                beauty and health of my skin
+              </p>
+            </blockquote>
             <figcaption>Sophia Princeton</figcaption>
           </figure>
           <figure class="testimonial testimonial--tamara">
             <span class="quote-mark" aria-hidden="true">〞</span>
-            <blockquote><p>For the past few years, I've had a hard time finding the right place for skin care to deal with my complicated skin condition, thank God I found GlowQueen to treat my skin</p></blockquote>
+            <blockquote>
+              <p>
+                For the past few years, I've had a hard time finding the right
+                place for skin care to deal with my complicated skin condition,
+                thank God I found GlowQueen to treat my skin
+              </p>
+            </blockquote>
             <figcaption>Tamara Jules</figcaption>
           </figure>
         </section>
@@ -106,15 +213,42 @@
     </div>
 
     <!-- Avisos nativos: los controles explican su alcance sin simular servicios reales. -->
-    <aside class="preview-note" id="preview-note" popover aria-labelledby="preview-title">
+    <aside
+      class="preview-note"
+      id="preview-note"
+      popover
+      aria-labelledby="preview-title"
+    >
       <h2 id="preview-title">Welcome to GlowQueen</h2>
-      <p>This is a design preview. Online bookings, accounts, search and shopping are not available yet.</p>
-      <button class="button" type="button" popovertarget="preview-note" popovertargetaction="hide">Got it</button>
+      <p>
+        This is a design preview. Online bookings, accounts, search and shopping
+        are not available yet.
+      </p>
+      <button
+        class="button"
+        type="button"
+        popovertarget="preview-note"
+        popovertargetaction="hide"
+      >
+        Got it
+      </button>
     </aside>
-    <aside class="preview-note" id="video-note" popover aria-labelledby="video-title">
+    <aside
+      class="preview-note"
+      id="video-note"
+      popover
+      aria-labelledby="video-title"
+    >
       <h2 id="video-title">A moment of care</h2>
       <p>Our video is not available in this preview yet.</p>
-      <button class="button" type="button" popovertarget="video-note" popovertargetaction="hide">Close</button>
+      <button
+        class="button"
+        type="button"
+        popovertarget="video-note"
+        popovertargetaction="hide"
+      >
+        Close
+      </button>
     </aside>
   </body>
 </html>

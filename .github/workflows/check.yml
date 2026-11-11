@@ -1,0 +1,24 @@
+# Valida las fuentes sin publicar una web ni cambiar la privacidad del repositorio.
+name: Check static project
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # Obtiene exactamente el commit que disparó la comprobación.
+      - uses: actions/checkout@v4
+      # Reutiliza el lockfile para repetir la instalación de desarrollo.
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - run: npm ci
+      # Comprueba formato y sincronización entre Sass y el CSS guardado.
+      - run: npm run format:check
+      - run: npm run check:css

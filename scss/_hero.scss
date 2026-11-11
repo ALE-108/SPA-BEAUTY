@@ -1,42 +1,193 @@
 @use "tokens" as *;
 
 // El contenedor conserva la proporción del PDF y sirve de referencia a las capas.
-.stage { position: relative; isolation: isolate; container-type: inline-size; width: min(100%, 1920px); aspect-ratio: 16 / 9; margin-inline: auto; overflow: clip; background: #fff; }
-.stage::before { content: ""; position: absolute; z-index: -1; inset: 0 0 auto; height: 75.925926%; background: linear-gradient(to right, $cream 0 66.927083%, $mint 66.927083% 100%); }
+.stage {
+  position: relative;
+  isolation: isolate;
+  container-type: inline-size;
+  width: min(100%, 1920px);
+  aspect-ratio: 16 / 9;
+  margin-inline: auto;
+  overflow: clip;
+  background: #fff;
+}
+.stage::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0 0 auto;
+  height: 75.925926%;
+  background: linear-gradient(
+    to right,
+    $cream 0 66.927083%,
+    $mint 66.927083% 100%
+  );
+}
 
 // Imagen transparente y flor decorativa respetan las coordenadas del original.
-.lotus { position: absolute; z-index: 0; left: design(1212); top: design(108); width: design(473); height: design(438); opacity: .045; }
-.portrait { position: absolute; z-index: 1; left: design(769.2); top: design(140.875); width: design(851.2); height: auto; max-width: none; }
+.lotus {
+  position: absolute;
+  z-index: 0;
+  left: design(1212);
+  top: design(108);
+  width: design(473);
+  height: design(438);
+  opacity: 0.045;
+}
+.portrait {
+  position: absolute;
+  z-index: 1;
+  left: design(769.2);
+  top: design(140.875);
+  width: design(851.2);
+  height: auto;
+  max-width: none;
+}
 
 // La columna de texto queda por encima del fondo y a la izquierda de la modelo.
-.hero-copy { position: absolute; z-index: 2; left: design(160); top: design(201); }
-.hero-copy h1 { font-size: design(64); font-weight: 700; line-height: 1.25; letter-spacing: 0; }
-.hero-description { margin-top: design(33); color: $muted; font-size: design(24); line-height: design(40); }
+.hero-copy {
+  position: absolute;
+  z-index: 2;
+  left: design(160);
+  top: design(201);
+}
+.hero-copy h1 {
+  font-size: design(64);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+.hero-description {
+  margin-top: design(33);
+  color: $muted;
+  font-size: design(24);
+  line-height: design(40);
+}
 
 // Las dos llamadas a la acción comparten eje y mantienen áreas de clic completas.
-.hero-actions { display: flex; align-items: center; gap: design(48); margin-top: design(54); font-size: design(18); }
-.book-button { width: design(180); height: design(60); }
-.video-button { display: flex; align-items: center; gap: design(16); padding: 0; background: transparent; }
-.play-icon { display: grid; place-items: center; width: design(48); height: design(48); border-radius: 50%; background: #fff; box-shadow: 0 design(24) design(40) #00000018; transition: box-shadow 160ms ease; }
-.play-icon svg { width: design(24); height: design(24); fill: $navy; }
-.video-button:hover .play-icon { box-shadow: 0 0 0 5px #a9d6cb70; }
-.video-button:hover > span:last-child { text-decoration: underline; text-underline-offset: 5px; }
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: design(48);
+  margin-top: design(54);
+  font-size: design(18);
+}
+.book-button {
+  width: design(180);
+  height: design(60);
+}
+.video-button {
+  display: flex;
+  align-items: center;
+  gap: design(16);
+  padding: 0;
+  background: transparent;
+}
+.play-icon {
+  display: grid;
+  place-items: center;
+  width: design(48);
+  height: design(48);
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 design(24) design(40) #00000018;
+  transition: box-shadow 160ms ease;
+}
+.play-icon svg {
+  width: design(24);
+  height: design(24);
+  fill: $navy;
+}
+.video-button:hover .play-icon {
+  box-shadow: 0 0 0 5px #a9d6cb70;
+}
+.video-button:hover > span:last-child {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
 
 // La tarjeta de cifras usa tres columnas iguales y conserva su fondo blanco.
-.statistics { position: absolute; z-index: 2; top: design(678); left: design(160); width: design(643); min-height: design(284); padding: design(32) design(0) design(34); background: #ffffffdb; border-radius: design(18); }
-.statistics ul { display: grid; grid-template-columns: 209fr 225fr 209fr; }
-.statistics li { display: flex; flex-direction: column; align-items: center; text-align: center; }
-.statistics img { width: design(72); height: design(72); }
-.statistics strong { margin-top: design(25); font-size: design(36); line-height: design(54); font-weight: 500; }
-.statistics p { margin-top: design(15); color: $muted; font-size: design(18); line-height: design(27); }
+.statistics {
+  position: absolute;
+  z-index: 2;
+  top: design(678);
+  left: design(160);
+  width: design(643);
+  min-height: design(284);
+  padding: design(32) design(0) design(34);
+  background: #ffffffdb;
+  border-radius: design(18);
+}
+.statistics ul {
+  display: grid;
+  grid-template-columns: 209fr 225fr 209fr;
+}
+.statistics li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.statistics img {
+  width: design(72);
+  height: design(72);
+}
+.statistics strong {
+  margin-top: design(25);
+  font-size: design(36);
+  line-height: design(54);
+  font-weight: 500;
+}
+.statistics p {
+  margin-top: design(15);
+  color: $muted;
+  font-size: design(18);
+  line-height: design(27);
+}
 
 // Las citas flotan en dos posiciones distintas y dejan ver el fondo a través de ellas.
-.testimonial { position: absolute; z-index: 3; width: design(405); min-height: design(247); padding: design(52) design(24) design(22); border-radius: design(16); background: #ffffff80; backdrop-filter: blur(12px); font-size: design(18); line-height: 1.5; }
-.testimonial--sophia { left: design(1449); top: design(435); }
-.testimonial--tamara { left: design(1309); top: design(747); }
-.testimonial blockquote { color: #070d12; }
-.testimonial figcaption { margin-top: design(8); font-weight: 700; }
+.testimonial {
+  position: absolute;
+  z-index: 3;
+  width: design(405);
+  min-height: design(247);
+  padding: design(52) design(24) design(22);
+  border-radius: design(16);
+  background: #ffffff80;
+  backdrop-filter: blur(12px);
+  font-size: design(18);
+  line-height: 1.5;
+}
+.testimonial--sophia {
+  left: design(1449);
+  top: design(435);
+}
+.testimonial--tamara {
+  left: design(1309);
+  top: design(747);
+}
+.testimonial blockquote {
+  color: #070d12;
+}
+.testimonial figcaption {
+  margin-top: design(8);
+  font-weight: 700;
+}
 
 // Dos paralelogramos reproducen las comillas del diseño sin depender de un glifo.
-.quote-mark { position: absolute; top: design(24); left: design(24); display: flex; gap: design(6); font-size: 0; }
-.quote-mark::before, .quote-mark::after { content: ""; width: design(10); height: design(21); background: $navy; transform: skewX(-20deg); }
+.quote-mark {
+  position: absolute;
+  top: design(24);
+  left: design(24);
+  display: flex;
+  gap: design(6);
+  font-size: 0;
+}
+.quote-mark::before,
+.quote-mark::after {
+  content: "";
+  width: design(10);
+  height: design(21);
+  background: $navy;
+  transform: skewX(-20deg);
+}

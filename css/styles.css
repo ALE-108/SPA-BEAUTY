@@ -33,7 +33,12 @@ body {
   background: #fff;
 }
 
-h1, h2, p, figure, blockquote, ul {
+h1,
+h2,
+p,
+figure,
+blockquote,
+ul {
   margin: 0;
 }
 
@@ -42,7 +47,8 @@ ul {
   list-style: none;
 }
 
-button, summary {
+button,
+summary {
   font: inherit;
 }
 
@@ -102,7 +108,9 @@ svg {
   box-shadow: 0 5px 14px rgba(38, 64, 101, 0.1450980392);
 }
 
-a:hover, .main-nav button:hover, .sign-in:hover {
+a:hover,
+.main-nav button:hover,
+.sign-in:hover {
   text-decoration: underline;
   text-underline-offset: 5px;
 }
@@ -141,7 +149,9 @@ a:hover, .main-nav button:hover, .sign-in:hover {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     transition: none !important;
     scroll-behavior: auto !important;
   }
@@ -464,7 +474,8 @@ a:hover, .main-nav button:hover, .sign-in:hover {
   font-size: 0;
 }
 
-.quote-mark::before, .quote-mark::after {
+.quote-mark::before,
+.quote-mark::after {
   content: "";
   width: 0.5208333333cqw;
   height: 1.09375cqw;
@@ -632,7 +643,8 @@ a:hover, .main-nav button:hover, .sign-in:hover {
     left: 24px;
     gap: 6px;
   }
-  .quote-mark::before, .quote-mark::after {
+  .quote-mark::before,
+  .quote-mark::after {
     width: 8px;
     height: 18px;
   }
