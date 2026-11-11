@@ -6,7 +6,7 @@ Guion para una futura explicación de un programador. Duración orientativa: 15�
 
 Abrir el proyecto en el editor, el PDF en su página 2, una terminal y el navegador. Ejecutar `npm ci`, `npm run build` y `npm start`. En una segunda terminal se puede dejar `npm run watch`. Usar primero un viewport de 1920 × 1080 al 100 % de zoom y luego mostrar el modo móvil. Aumentar el tamaño de la fuente del editor para que el código se lea en video. Preparar una copia de demostración para cambios temporales y restaurarla después.
 
-No mostrar configuración de cuentas ni credenciales. El repositorio es privado: para enseñar el resultado basta el navegador local y los archivos del ejercicio.
+No mostrar configuración de cuentas ni credenciales. El repositorio del ejercicio es público y la web se consulta en https://ale-108.github.io/SPA-BEAUTY/. La configuración de cuentas y el contexto interno de trabajo permanecen fuera del video.
 
 ## Escena 1. Entender qué vamos a construir — 0:00–1:20
 
@@ -20,7 +20,7 @@ No mostrar configuración de cuentas ni credenciales. El repositorio es privado:
 
 »Es una práctica de HTML y CSS. No necesitamos un servidor de reservas, una base de datos ni una aplicación de cuentas. Los botones de esas funciones mostrarán un aviso para que la maqueta no prometa servicios que todavía no tiene.»
 
-**Idea a destacar:** leer los requisitos antes de elegir tecnologías. La privacidad actual del repositorio es una decisión del propietario y prevalece sobre la publicación pública que pide la consigna.
+**Idea a destacar:** leer los requisitos antes de elegir tecnologías. El propietario autorizó publicar este repositorio y la web; esa decisión está registrada y el contexto interno permanece privado.
 
 ## Escena 2. Preparar recursos y carpetas — 1:20–2:40
 
@@ -196,9 +196,9 @@ No mostrar configuración de cuentas ni credenciales. El repositorio es privado:
 
 **Narración:**
 
-«El proyecto se entrega en un repositorio específico y privado. El README explica cómo ejecutarlo, dónde editar los estilos y qué funciones son sólo parte de la maqueta.
+«El proyecto se entrega en un repositorio específico y público. El README explica cómo ejecutarlo, dónde editar los estilos y qué funciones son sólo parte de la maqueta.
 
-»La consigna pide un enlace público, pero el propietario ha indicado mantener la privacidad en esta primera etapa. Por eso no se habilitó GitHub Pages. Si más adelante se autoriza la publicación, primero revisaremos los permisos de los recursos y después prepararemos ese despliegue.
+»Al principio mantuvimos el repositorio privado. Después el propietario autorizó hacerlo público y habilitar GitHub Pages para revisar el resultado en el navegador. Pages sirve los archivos de la raíz de main y el archivo .nojekyll evita que se intenten procesar como un sitio Jekyll. El sitio está en ale-108.github.io/SPA-BEAUTY/.
 
 »Para mantener el proyecto, cambio los módulos Sass, compilo y guardo el CSS junto con el código. Si una modificación publicada falla, git revert permite deshacerla conservando el historial.
 
@@ -206,16 +206,16 @@ No mostrar configuración de cuentas ni credenciales. El repositorio es privado:
 
 ## Preguntas para preparar la explicación
 
-| Pregunta                                  | Respuesta que conviene demostrar                                                                  |
-| ----------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| ¿Por qué Sass?                            | Centraliza colores, permite módulos y convierte medidas con una función. El navegador recibe CSS. |
-| ¿Por qué no un framework?                 | La maqueta no necesita estado complejo ni componentes dinámicos.                                  |
-| ¿Por qué absolute?                        | Reproduce superposiciones dentro de un contenedor controlado. En móvil se recupera el flujo.      |
-| ¿Qué diferencia hay entre Grid y Flexbox? | Grid organiza columnas; Flexbox alinea elementos dentro de grupos.                                |
-| ¿Para qué sirve cqw?                      | Expresa medidas según el ancho del contenedor, no según cualquier elemento de la pantalla.        |
-| ¿Qué hace WebP?                           | Guarda la fotografía con transparencia y menor peso; los iconos siguen siendo SVG.                |
-| ¿Por qué no funciona una reserva real?    | El alcance es maquetación y no existe un backend de reservas. El aviso lo explica.                |
-| ¿Qué falta para la entrega pública?       | Autorización del propietario, revisión de recursos y despliegue.                                  |
+| Pregunta                                  | Respuesta que conviene demostrar                                                                      |
+| ----------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| ¿Por qué Sass?                            | Centraliza colores, permite módulos y convierte medidas con una función. El navegador recibe CSS.     |
+| ¿Por qué no un framework?                 | La maqueta no necesita estado complejo ni componentes dinámicos.                                      |
+| ¿Por qué absolute?                        | Reproduce superposiciones dentro de un contenedor controlado. En móvil se recupera el flujo.          |
+| ¿Qué diferencia hay entre Grid y Flexbox? | Grid organiza columnas; Flexbox alinea elementos dentro de grupos.                                    |
+| ¿Para qué sirve cqw?                      | Expresa medidas según el ancho del contenedor, no según cualquier elemento de la pantalla.            |
+| ¿Qué hace WebP?                           | Guarda la fotografía con transparencia y menor peso; los iconos siguen siendo SVG.                    |
+| ¿Por qué no funciona una reserva real?    | El alcance es maquetación y no existe un backend de reservas. El aviso lo explica.                    |
+| ¿Qué falta para la entrega pública?       | El sitio ya se publica con autorización; quedan la revisión del propietario y la grabación del video. |
 
 ## Lista de comprobación para la futura grabación
 

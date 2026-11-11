@@ -9,7 +9,7 @@ El propietario proporcionó un PDF de referencia y dos ZIP con archivos Figma. L
 - Iconos de lupa, bolsa, flecha y reproducción: trazos SVG simples escritos en el HTML siguiendo la referencia.
 - Los textos, las cifras y los nombres de los testimonios se conservan del diseño proporcionado.
 
-La consigna no aporta una licencia de redistribución de la fotografía, marca o diseño. Su uso aquí corresponde al ejercicio solicitado. No se atribuye una licencia abierta a estos materiales. El repositorio se mantiene privado por instrucción del propietario; antes de cualquier publicación pública debe revisarse la autorización de uso del material.
+La consigna no aporta una licencia de redistribución de la fotografía, marca o diseño. Su uso aquí corresponde al ejercicio solicitado. No se atribuye una licencia abierta a estos materiales. El propietario autorizó publicar este ejercicio y su repositorio el 11 de noviembre de 2026. Esta autorización de publicación no convierte los materiales originales en recursos con licencia abierta.
 
 ## Tipografía
 

@@ -16,7 +16,7 @@ npm run build
 npm start
 ```
 
-Abrir <http://127.0.0.1:5173>. El repositorio es privado y clonar requiere acceso autorizado a GitHub. Requisitos de desarrollo: Node.js 22 o posterior, npm y Python 3 para el servidor estático. No hay dependencias de Python que instalar.
+Abrir <http://127.0.0.1:5173>. El repositorio es público y puede clonarse sin una cuenta autorizada. Requisitos de desarrollo: Node.js 22 o posterior, npm y Python 3 para el servidor estático. No hay dependencias de Python que instalar.
 
 Para editar Sass con compilación automática, abrir una segunda terminal y ejecutar `npm run watch`. Detener los procesos con `Ctrl+C`.
 
@@ -74,7 +74,11 @@ Se revisó la página en Chromium a 1920, 1440, 900 y 390 px, incluyendo recurso
 
 ## Publicación y mantenimiento
 
-El repositorio permanece **privado** por decisión del propietario. No se ha habilitado GitHub Pages ni un sitio público. La exigencia académica de enlace público queda aplazada hasta una nueva instrucción del propietario.
+El propietario autorizó hacer público este repositorio y publicar la web el 11 de noviembre de 2026.
+
+**Ver la web:** <https://ale-108.github.io/SPA-BEAUTY/>
+
+GitHub Pages publica los archivos estáticos desde la raíz de `main`. El archivo `.nojekyll` evita que Jekyll procese los módulos Sass como un sitio propio. Para actualizar la web, confirmar y subir el HTML, los recursos y el CSS compilado a `main`; Pages ejecuta automáticamente su despliegue. El workflow `Check static project` verifica formato y sincronización de CSS por separado.
 
 Los cambios se hacen en `scss/`; después se compila y se confirma también `css/styles.css`. Para deshacer un cambio publicado, usar `git revert <commit>` y volver a compilar. Mantener el lockfile y usar `npm ci` para repetir la instalación. No se necesitan claves ni variables de entorno.
 
