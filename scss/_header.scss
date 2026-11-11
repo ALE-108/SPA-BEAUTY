@@ -37,44 +37,22 @@
   padding: 0;
   background: transparent;
 }
-.more-menu summary {
+.more-button {
   display: flex;
   align-items: center;
   gap: design(14);
   cursor: pointer;
-  list-style: none;
 }
-.more-menu summary::-webkit-details-marker {
-  display: none;
-}
-.more-menu summary:hover {
+.more-button:hover {
   text-decoration: underline;
   text-underline-offset: 5px;
 }
-.more-menu svg {
+.more-button svg {
   width: design(16);
   height: design(16);
   fill: none;
   stroke: currentColor;
   stroke-width: 2;
-}
-
-// El menú desplegable ocupa su propia capa y contiene enlaces a secciones existentes.
-.more-menu {
-  position: relative;
-}
-.dropdown {
-  position: absolute;
-  top: calc(100% + 16px);
-  left: -16px;
-  width: max-content;
-  padding: 14px 20px;
-  border-radius: 12px;
-  background: #fff;
-  box-shadow: 0 8px 28px #26406518;
-}
-.dropdown li + li {
-  margin-top: 12px;
 }
 
 // Iconos SVG y acceso a cuenta mantienen la misma altura visual.

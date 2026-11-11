@@ -4,9 +4,8 @@
 .stage {
   position: relative;
   isolation: isolate;
-  container-type: inline-size;
-  width: min(100%, 1920px);
-  aspect-ratio: 16 / 9;
+  width: 1920px;
+  height: 1080px;
   margin-inline: auto;
   overflow: clip;
   background: #fff;
@@ -91,7 +90,6 @@
   border-radius: 50%;
   background: #fff;
   box-shadow: 0 design(24) design(40) #00000018;
-  transition: box-shadow 160ms ease;
 }
 .play-icon svg {
   width: design(24);
@@ -99,14 +97,14 @@
   fill: $navy;
 }
 .video-button:hover .play-icon {
-  box-shadow: 0 0 0 5px #a9d6cb70;
+  background: $mint;
 }
 .video-button:hover > span:last-child {
   text-decoration: underline;
   text-underline-offset: 5px;
 }
 
-// La tarjeta de cifras usa tres columnas iguales y conserva su fondo blanco.
+// La tarjeta de cifras conserva las tres columnas del diseño y conserva su fondo blanco.
 .statistics {
   position: absolute;
   z-index: 2;

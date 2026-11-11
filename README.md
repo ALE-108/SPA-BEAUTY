@@ -1,12 +1,14 @@
 # GlowQueen — Spa & Beauty
 
-Maquetación del header de Spa & Beauty con HTML semántico y Sass. La referencia principal es la página 2 del PDF de la consigna, con lienzo de **1920 × 1080**.
+Ejercicio de curso: reproducción estática de la página 2 del PDF en un lienzo fijo de **1920 × 1080 px**, con HTML semántico y Sass.
 
-![Vista de escritorio de GlowQueen](docs/images/desktop.png)
+**Web:** <https://ale-108.github.io/SPA-BEAUTY/>
 
-## Ejecutar
+![Vista de escritorio](docs/images/desktop.png)
 
-La página terminada puede abrirse directamente desde `index.html`: el CSS, las fuentes y las imágenes son locales. Para trabajar con un servidor local:
+## Ejecutar y compilar
+
+La página se abre directamente desde `index.html`: CSS compilado, fuentes e imágenes son locales. Para trabajar con servidor:
 
 ```bash
 git clone https://github.com/ALE-108/SPA-BEAUTY.git
@@ -16,51 +18,64 @@ npm run build
 npm start
 ```
 
-Abrir <http://127.0.0.1:5173>. El repositorio es público y puede clonarse sin una cuenta autorizada. Requisitos de desarrollo: Node.js 22 o posterior, npm y Python 3 para el servidor estático. No hay dependencias de Python que instalar.
+Abrir <http://127.0.0.1:5173>. Requisitos de desarrollo: Node.js22 o posterior, npm y Python3 para el servidor estático. `npm run watch` recompila al editar Sass. Detener con Ctrl+C.
 
-Para editar Sass con compilación automática, abrir una segunda terminal y ejecutar `npm run watch`. Detener los procesos con `Ctrl+C`.
+## Ajuste punto por punto
 
-## Organización
+| Consigna                         | Implementación                                                                                                   |
+| -------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| Boilerplate libre                | Base mínima propia.                                                                                              |
+| Sass recomendado, no obligatorio | Sintaxis SCSS, variables, función de medidas y módulos con `@use`.                                               |
+| Diseño estático                  | Lienzo fijo1920×1080, sin responsive ni escalado según ancho. En ventanas menores se recorre con desplazamiento. |
+| Recursos de diseño               | Fotografía original del FIG adjunto; vectores del PDF. Véase `docs/RECURSOS.md`.                                 |
+| Iconos SVG                       | Navegación, acciones, estadísticas y decoración vectoriales.                                                     |
+| Semántica                        | header/nav/main, secciones, listas y blockquote con autor.                                                       |
+| Fidelidad al PDF                 | Distribución, foto, textos, colores y superposiciones comparados a1920×1080.                                     |
+| Hover obligatorio                | Cambios inmediatos de estilo, sin animaciones ni transiciones temporizadas.                                      |
+| Repositorio específico           | https://github.com/ALE-108/SPA-BEAUTY                                                                            |
+| Enlace público                   | GitHub Pages desde main, raíz.                                                                                   |
+
+## Hover y alcance
+
+- Botones principales: cambio inmediato de fondo.
+- Enlaces y navegación: subrayado; la marca reduce su opacidad.
+- Lupa y bolsa: cambio inmediato de color.
+- Watch Video: cambio de fondo del círculo y subrayado del texto.
+- Sign In: cambio de separación del subrayado.
+
+La consigna pide un estado hover, pero no define sus colores o acabados. Las sombras y transparencias visibles en reposo reproducen el PDF: no son animaciones.
+
+La barra de navegación y la flecha More pertenecen a la composición. **More no abre un desplegable.** Los botones reproducen controles visuales y no ejecutan reservas, cuentas, compras, búsqueda ni video. No abren avisos ni ventanas. Los enlaces internos básicos apuntan a secciones existentes. El foco de teclado utiliza el comportamiento nativo del navegador.
+
+No hay JavaScript de producto, popovers, adaptación móvil, `@keyframes` ni reglas de `animation` o `transition`.
+
+## Organización y Sass
 
 ```text
-index.html              Contenido y estructura semántica
-assets/fonts/           Poppins local y licencia OFL
-assets/icons/           SVG originales recuperados y decoración
-assets/images/          Fotografía con transparencia
-scss/_tokens.scss       Colores y escala del diseño
-scss/_base.scss         Fuentes, reset, botones y accesibilidad
-scss/_header.scss       Cabecera y navegación
-scss/_hero.scss         Composición y superposiciones
-scss/_mobile.scss       Adaptación adicional para pantallas pequeñas
-scss/styles.scss        Entrada de compilación
-css/styles.css          CSS compilado, incluido para abrir sin instalar nada
-docs/LIBRETO_VIDEO.md    Guion narrado del desarrollo
-docs/RECURSOS.md         Procedencia y límites de uso de recursos
+index.html              Estructura y contenido semántico
+assets/                 Foto, SVG y fuentes locales con licencia
+scss/_tokens.scss       Colores y función de medidas en píxeles
+scss/_base.scss         Fuentes, reset, botones y hover
+scss/_header.scss       Cabecera y navegación visual
+scss/_hero.scss         Lienzo fijo, contenido y capas
+scss/styles.scss        Entrada Sass
+css/styles.css          CSS compilado para el navegador
+docs/LIBRETO_VIDEO.md    Libreto del desarrollo
+docs/RECURSOS.md         Procedencia de recursos
 ```
-
-## Cómo funciona
 
 ```mermaid
 flowchart LR
-  HTML[index.html: contenido semántico] --> Browser[Navegador]
-  Sass[scss/styles.scss y módulos] --> Compiler[Sass]
-  Compiler --> CSS[css/styles.css]
+  SCSS[SCSS: módulos y variables] --> Sass[Compilador Sass]
+  Sass --> CSS[css/styles.css]
+  HTML[index.html] --> Browser[Navegador]
   CSS --> Browser
-  Assets[SVG, fotografía y fuentes locales] --> Browser
-  Browser --> Preview[Composición GlowQueen]
+  Assets[Foto, SVG y fuentes locales] --> Browser
 ```
 
-La cabecera usa Grid y Flexbox. La fotografía, la decoración y las tarjetas se anclan al contenedor con `position: absolute`. La función Sass `design()` convierte las coordenadas de referencia en unidades `cqw`, relativas al ancho del contenedor. Bajo 900 px, el contenido se apila para mantener su lectura. Esa adaptación es adicional: la consigna evalúa principalmente el escritorio.
+SCSS es una sintaxis de Sass. El navegador recibe el CSS generado con `npm run build`. Los comentarios explican grupos pequeños en español.
 
-## Interacciones y alcance
-
-- Home, About y Services navegan a secciones existentes. More abre un menú nativo con enlaces a estadísticas y testimonios.
-- Book Now, Sign In, Sign Up, Search, Shopping bag y Facilities muestran un aviso de vista previa. No hay reservas, usuarios, buscador ni compras reales.
-- Watch Video informa que no hay un video disponible. No se agregó un video ajeno al material.
-- Los avisos se abren con HTML `popover`, se cierran con su botón o con Escape y no necesitan JavaScript. Se requiere un navegador moderno compatible con Popover API y unidades de contenedor.
-- Hay estados hover, foco visible, enlace de salto y respeto por `prefers-reduced-motion`.
-
-## Verificación
+## Verificación y publicación
 
 ```bash
 npm run build
@@ -68,18 +83,8 @@ npm run check:css
 npm run format:check
 ```
 
-`check:css` falla si recompilar Sass cambia el CSS versionado. GitHub Actions ejecuta estas comprobaciones con cada push y pull request. El workflow verifica el proyecto; no despliega una web.
+`check:css` verifica que el CSS guardado coincida con Sass. GitHub Actions comprueba compilación y formato. Se comprueban en navegador el lienzo fijo, los recursos, hover y ausencia de funciones adicionales. Comparar con el PDF a1920×1080; pueden existir diferencias menores de rasterizado entre PDF y navegador.
 
-Se revisó la página en Chromium a 1920, 1440, 900 y 390 px, incluyendo recursos, navegación interna, menú More, avisos, cierre con Escape y salto de teclado. Las capturas de escritorio y móvil están en `docs/images/`. Las capturas reflejan la comprobación realizada y no sustituyen una prueba en otros navegadores.
+Pages publica la raíz de main; `.nojekyll` evita procesar el proyecto como Jekyll. Editar Sass/HTML, compilar y subir también el CSS. Para deshacer cambios, usar `git revert <commit>`. No se necesitan claves ni variables de entorno.
 
-## Publicación y mantenimiento
-
-El propietario autorizó hacer público este repositorio y publicar la web el 11 de noviembre de 2026.
-
-**Ver la web:** <https://ale-108.github.io/SPA-BEAUTY/>
-
-GitHub Pages publica los archivos estáticos desde la raíz de `main`. El archivo `.nojekyll` evita que Jekyll procese los módulos Sass como un sitio propio. Para actualizar la web, confirmar y subir el HTML, los recursos y el CSS compilado a `main`; Pages ejecuta automáticamente su despliegue. El workflow `Check static project` verifica formato y sincronización de CSS por separado.
-
-Los cambios se hacen en `scss/`; después se compila y se confirma también `css/styles.css`. Para deshacer un cambio publicado, usar `git revert <commit>` y volver a compilar. Mantener el lockfile y usar `npm ci` para repetir la instalación. No se necesitan claves ni variables de entorno.
-
-El [libreto de video](docs/LIBRETO_VIDEO.md) explica el desarrollo paso a paso. La grabación se hará en una etapa posterior.
+El [libreto](docs/LIBRETO_VIDEO.md) corresponde a esta versión estática. La grabación se hará después.

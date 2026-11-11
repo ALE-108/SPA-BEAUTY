@@ -1,12 +1,10 @@
-@use "sass:math";
-
 // Paleta tomada de la página 2 del PDF de referencia.
 $navy: #264065;
 $mint: #a9d6cb;
 $cream: #faf8f5;
 $muted: #909090;
 
-// Convierte píxeles del lienzo de 1920 en unidades del contenedor escalable.
+// Expresa las medidas del diseño original en píxeles, sin escalado responsive.
 @function design($pixels) {
-  @return math.div($pixels, 19.2) * 1cqw;
+  @return $pixels * 1px;
 }
